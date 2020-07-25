@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+ <br><br><br><br><br><br>
+ 
+ 
+ 
+	<h1>ඔබේ දරුවාගේ උදෑසන ආහාරය සඳහා වේලාව සකස් කිරීම.</h1>
+<br><br><br><br><br><br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    
+    	
+    	<input name="age" type="number " placeholder="Age" required="required">
+    	<input name="gender" type="number " placeholder="Gender" required="required">
+    	<input name="enjoy_level" type="number " placeholder="Enjoy Level" required="required">
+    	<input name="understandability" type="number " placeholder="Understandability Level" required="required">
+    	<input name="completion" type="number " placeholder="Completion Level" required="required">
+    	
+    	
+    	<!--
+    	<input id="first" name="age" type="number " placeholder="Age" required="required">
+    	<select name="gender" id="fuel" type="number" required="required">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+    	<select name="enjoy_level" id="fuel" type="number" required="required">
+                <option value="1">අඩු</option>
+                <option value="2">Female</option>
+                 <option value="2">Female</option>
+            </select>
+            -->
+    	<!--
+    	<input type="text" name="age"  required="required" />
+        <input type="text" name="gender" placeholder="Gender" required="required" />
+		<input type="text" name="enjoy_level" placeholder="Enjoy Level" required="required" />
+		<input type="text" name="understandability" placeholder="Understandability Level" required="required" />
+		<input type="text" name="completion" placeholder="Completion Level" required="required" />
+		-->
+
+        <button type="submit" class="button">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <font size = 25pt >{{ prediction_text }}</h1>
+   <br>
+   <br>
+   <br>
+   <br>
+   <a href="E:/activity.html" class="button">ආරම්භ කරන්න</a>
+   
+   
+ </div>
+ 
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 28px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+         .button {
+        background-color: #1c87c9;
+        border: none;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+        
+    </style>
+</body>
+</html>
